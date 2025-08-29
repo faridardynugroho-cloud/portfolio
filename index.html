@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">ArdyArt.</a>
+        <div class="menu-nav"><i data-feather="menu"></i></div>
+        <ul class="links">
+            <li ><a href="#home" class="nav-link active" data-target="home">Home</a></li>
+            <li ><a href="#about" class="nav-link" data-target="about">About</a></li>
+            <li ><a href="#skills" class="nav-link" data-target="skills">Skills</a></li>
+            <li ><a href="#project" class="nav-link" data-target="project">Project</a></li>
+        </ul>
+    </nav>
+    <section class="home" id="home">
+        <div class="home-info">
+            <h1>Farid Ardy Nugroho</h1>
+            <h2>
+                <span style="--i:2;" data-text="Full Stack Developer">Full Stack Developer</span>
+                <span style="--i:1;" data-text="Full Stack Developer">Full Stack Developer</span>
+            </h2>
+            <p>Saya seorang Software Developer yang akan membantu kamu membangun solusi digital yang efisien melalui
+                clean code dan desain yang intuitif</p>
+            <div class="btn-home">
+                <a href="CV-ARDY.pdf" download="CV-ARDY.pdf" class="btn-cv">Donwload CV</a>
+                <a href="https://wa.me/628812126877" target="_blank" class="btn-contact">Contact</a>
+                <a href="https://instagram.com/leoarnoovvv_" class="sosmed"><i data-feather="instagram" class="icons"></i></a>
+                <a href="https://twitter.com/nyyyx83648" class="sosmed"><i data-feather="twitter" class="icons"></i></a>
+                <a href="https://www.linkedin.com/in/nyyyx-ken-6b6a05380" class="sosmed"><i data-feather="linkedin" class="icons"></i></a>
+                
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="home.png" alt="">
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="heading">About <span>Me</span></div>
+        <div class="img-about">
+            <img src="about.png" alt="">
+            <span class="circle-spin"></span>
+        </div>
+        <h3>Full Stack Developer!</h3>
+        <p>Hai, saya Ardy <br> Awal saya mulai tertarik dengan dunia coding itu sejak saya masih di jenjang sekolah,
+            tapi
+            karena keterbatasan saya baru bisa mulai belajar ketika saya masuk ke dunia perkuliahan dengan jurusan IT
+            sebagai pilihan. Dari situ, saya mulai mengenal Python, HTML, CSS, Flutter, lalu berlanjut ke javaScript dan
+            PHP.Saya memiliki rasa penasaran yang tinggi dan suka menghadapi tantangan apalagi belajar hal baru, karena
+            dapat berkembang merupakan suatu yang menyenangkan.
+        </p>
+    </section>
+    <section class="skills" id="skills">
+        <div class="heading">My <span>Skills</span></div>
+        <div class="skill-row">
+            <div class="skill-column">
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <div class="progres">
+
+                            <h3><span><img src="html.png" alt=""></span>HTML <span class="persen">50%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progres">
+                            <h3><span><img src="css.png" alt=""></span>CSS <span class="persen">50%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-column">
+                <div class="skill-box">
+                    <div class="skill-content">
+                        <div class="progres">
+                            <h3><span><img src="javascipt.png" alt=""></span >javaScript <span class="persen">30%</span>
+                            </h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                        <div class="progres">
+                            <h3><span><img src="php.png" alt=""></span>PHP <span class="persen">40%</span></h3>
+                            <div class="bar"><span></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project"  id="project">
+        <div class="heading">My <span>Project</span></div>
+        <div class="project-row">
+            <div class="project-column">
+                <div href="" class="project-content">
+                    <img src="logo-book.png" alt="">
+                    <div class="result">
+                        <h3>Book Bridge</h3>
+                        <p>Website penjualan buku lengkap dengan fitur keranjang belanja, checkout, dan pembayaran,
+                            dibangun menggunakan <span>Laravel, MySQL, javaScript.</span> <br> Fitur: register/login,
+                            keranjang dinamis, notifikasi pembayaran. </p>
+                    </div>
+                    <!-- <div class="github"><a href="" class="btn-github">Code Github</a></div> -->
+                </div>
+                <div href="" class="project-content">
+                    <img src="for-game.png" alt="">
+                    <div class="result">
+                        <h3>For Game</h3>
+                        <p>Website informatif yang berisikan tentang seputar game, dibangun menggunakan <span>HTML,
+                                CSS.</span> <br> Fitur: register/login, pilihan berbagai genre, penjelasan game yang
+                            cukup detail </p>
+                    </div>
+                    <!-- <div class="github"><a href="" class="btn-github">Code Github</a></div> -->
+                </div>
+            </div>
+            <div class="project-column">
+                <div href="" class="project-content">
+                    <img src="logo-busi.png" alt="">
+                    <div class="result">
+                        <h3>BUSI</h3>
+                        <p>Aplikasi berbasis mobile yang dapat memonitoring posisi bus, dibangun menggunakan framework
+                            <span>Flutter.</span><br> Fitur: registrasi/login, topup saldo, transfer, pembayaran bus
+                            menggunakan QR, map monitoring, destinasi populer. </p>
+                    </div>
+                    <!-- <div class="github"><a href="" class="btn-github">Code Github</a></div> -->
+                </div>
+                <div href="" class="project-content">
+                    <img src="logo-patapay.png" alt="">
+                    <div class="result">
+                        <h3>Patapay</h3>
+                        <p>aplikasi berbasis mobile tentang penggajian karyawan, dibangun menggunakan framework
+                            <span>Flutter.</span><br> Fitur: register/login, menampilkan data karyawan secara detail,
+                            menghitung gaji, dan absensi karyawan. </p>
+                    </div>
+                    <!-- <div class="github"><a href="" class="btn-github">Code Github</a></div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="copyright">Copyright &copy; 2025 | Created by Farid Ardy Nugroho</div>
+        <div class="nav-link" data-target="home" href="#home"><a class="btn-back "><i data-feather="arrow-up-circle" class="icon"></i></a></div>
+    </footer>
+
+    <script>
+        feather.replace();
+    </script>
+    <script src="javascipt.js"></script>
+</body>
+
+</html>
