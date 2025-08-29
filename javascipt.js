@@ -12,7 +12,7 @@ navlinks.forEach(link =>{
     link.addEventListener('click' ,function(e) {
         e.preventDefault()
         navlinks.forEach(link => {
-            link.classList.remove('active');
+             link.classList.remove('active');
             const target = this.getAttribute('data-target');
             const mappedTarget = mapping[target] || target;
 
@@ -34,6 +34,10 @@ window.addEventListener('scroll', () =>{
 
         if(scrollY >= sectionTop && scrollY < sectionTop + sectionHeight){
             current = section.getAttribute('id');
+            section.classList.add('show-animasi')
+        }
+        else{
+            section.classList.remove('show-animasi')
         }
     });
     navlinks.forEach(link =>{
@@ -42,6 +46,7 @@ window.addEventListener('scroll', () =>{
             link.classList.toggle('active')
         }
     })
+   
     
 })
 
@@ -58,4 +63,10 @@ document.addEventListener('click', function(e){
     if(!menu.contains(e.target) && !links.contains(e.target)){
         links.classList.remove('active')
     }
+})
+
+navlinks.forEach(link =>{
+    link.addEventListener('click', () =>{
+        links.classList.remove('active')
+    })
 })

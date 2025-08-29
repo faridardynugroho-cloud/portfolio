@@ -29,6 +29,7 @@ html{
     top: 0;
 }
 .logo{
+    position: relative;
     color: white;
     font-size: 2rem;
     font-weight: 700;
@@ -39,6 +40,7 @@ html{
     display: none;
 }
 .navbar .links{
+    position: relative;
     display: flex;
     gap: 2rem;
     margin-right: 2rem;
@@ -59,6 +61,7 @@ html{
 } 
 
 .home{
+    position: relative;
     display: flex;
     width: 100%;
     align-items: center;
@@ -67,28 +70,51 @@ html{
     padding: 7rem 5rem;
 }
 .home-info h1{
+    position: relative;
     font-size: 2.6rem;
     color: white;
 }
-.home-info h2{
-    display: inline-block;
-    font-size: 1.7rem;
-    margin-top: -1rem;
-}
-.home-info h2 span{
+
+.home-info h2 {
     position: relative;
-    color: transparent;
-    display: inline-block;
+    font-size: 3rem;
+    color: #008ECC;
     -webkit-text-stroke: .5px #008ECC;
+    background-image: linear-gradient(#008ECC, #008ECC);
+    background-position: 0 0;
     animation: display-text 6s linear infinite;
     animation-delay: calc(-3s * var(--i));
 
 }
+.home-info h2::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid #008ECC;
+    z-index: -1;
+
+}
+
 @keyframes display-text{
-    50%,
+    0%,
+    10%,
     100%{
-        display: none;
+        opacity: 0;
+    };
+    65%,
+    78%,
+    85%{
+        width: 100%;
+        opacity: 1;
     }
+    75%,
+    81%{
+        opacity: 0;
+    }
+
 
 }
 .home-info h2 span::before{
@@ -113,6 +139,7 @@ html{
     }
 }
 .home-info p{
+    position: relative;
     color: white;
     font-size: 0.9rem;
     margin: 1rem 0 1.2rem;
@@ -124,30 +151,39 @@ html{
     align-items: center;
     gap: 1.1rem;
 }
+.btn-atas{
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
 .btn-bawah{
+    position: relative;
     display: flex;
     gap: 1rem;
 }
 .btn-cv{
+    position: relative;
     display: flex;
     justify-content: center;
-    background-color: #008ECC;
+    background-color: transparent;
     padding: .5rem .6rem;
-    color: #1f242d;
+    color: #008ECC;
     border-radius: 5rem;
     border: 3px solid #008ECC;
-    box-shadow: 0 0 .6rem #008ECC;
+    box-shadow: none;
     font-size: 1rem;
     font-weight: 600;
     transition: 0.5s;
     width: 9rem;
 }
 .btn-cv:hover{
-    background-color: transparent;
-    color: #008ECC;
-    box-shadow: none;
+    background-color: #008ECC;
+    color: #081B29;
+    box-shadow: 0 0 .6rem #008ECC;
+    
 }
 .btn-contact{
+    position: relative;
     display: inline-block;
     background-color: transparent;
     padding: .5rem 2rem;
@@ -195,6 +231,7 @@ html{
     width: 100%;
 }
 .home-img{
+    position: relative;
     margin-top: 30px;
 }
 .home-img .img-box{
@@ -247,6 +284,7 @@ html{
 }
 
 .about{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,9 +292,11 @@ html{
     background-color: #112E42;
     gap: 1rem;
     padding-bottom: 5rem;
+    padding-top: 5rem;
 }
 
 .about .heading{
+    position: relative;
     color: white;
     font-size: 3rem;
     font-weight: 600;
@@ -293,13 +333,21 @@ html{
     border-bottom: .2rem solid #112E42;
     border-left: .2rem solid #008ECC;
     border-right: .2rem solid #008ECC;
+    animation: spinner 8s linear infinite;
 
 }
+@keyframes spinner{
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
 .about h3{
+    position: relative;
     color: white;
     font-size: 2rem;
 }
 .about p{
+    position: relative;
     font-size: 1.3rem;
     text-align: center;
     padding: 0 6rem;
@@ -307,6 +355,7 @@ html{
 }
 
 .skills{
+    position: relative;
     padding-bottom: 3rem;
     margin: 0 2rem;
     min-height: auto;
@@ -315,6 +364,7 @@ html{
 }
 
 .skills .heading{
+    position: relative;
     font-size: 3rem;
     color: white;
     font-weight: 600;
@@ -329,6 +379,7 @@ html{
     gap: 5rem;
 }
 .skill-row .skill-column{
+    position: relative;
     flex: 1 1 40rem;
 }
 .skill-box .skill-content{
@@ -394,13 +445,15 @@ html{
 }
 
 .project{
-    padding-bottom: 5rem;
+    position: relative;
+    padding-bottom: 7rem;
     min-height: auto;
     background: #112E42;
-    padding-top: 5.5rem;
+    padding-top: 7rem;
 }
 
 .project .heading{
+    position: relative;
     font-size: 3rem;
     color: white;
     font-weight: 600;
@@ -506,6 +559,7 @@ footer{
     align-items: center;
 }
 .copyright{
+    position: relative;
     color: white;
     font-size: 1rem;
     padding-left: 7rem;
@@ -521,7 +575,6 @@ footer{
     border-radius: .5rem;
     overflow: hidden;
     cursor: pointer;
-
 }
 .icon{
     z-index: 1;
@@ -543,6 +596,29 @@ footer{
     color: #008ECC;
 }
 
+ .animasi{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081B29;
+    z-index: 98;
+ }
+ .logo .animasi,
+ .links .animasi,.home.show-animasi .animasi,
+ .about.show-animasi .animasi,  .skills.show-animasi .animasi, 
+ .project.show-animasi .animasi{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+ }
+
+ @keyframes showRight{
+    100%{
+        width: 0;
+    }
+ }
+
 @media (max-width: 576px) {
     .navbar{
         padding:1rem 5%;
@@ -561,6 +637,8 @@ footer{
         background: #081B29;
         border-radius: .6rem;
         width: 100%;
+        transition: .25s ease;
+
     }
     .navbar .links li{
         text-align: center;
@@ -568,6 +646,10 @@ footer{
     .navbar .links.active{
         display: flex;
     }
+     .links .animasi{
+        animation: showRight 1s ease forwards;
+        animation-delay: 0s;
+     }
     .menu-nav{
         display: flex;
     }
@@ -889,15 +971,21 @@ footer{
         text-align: justify;
         font-size: .8rem;
     }
+    footer{
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
     .copyright{
+        margin-left: -5rem;
         font-size: .8rem;
-        padding-left: 2rem;
+        order: 2;
     }
     .btn-back{
-        margin-right: 3rem;
-        margin-left: 5rem;
+        margin-right: -1rem;
         width: 1.9rem;
         height: 2.1rem;
+        order: 1;
     }
 }
 
