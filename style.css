@@ -824,7 +824,7 @@ footer{
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 458px) {
     .navbar .links{
         top: 3.9rem;
     }
@@ -834,12 +834,15 @@ footer{
     .logo{
         font-size: 1.3rem;
     }
+    .home{
+        padding-bottom: 1rem;
+    }
     .home-img .img-box{
         width: 60vw;
         height: 60vw;
     }
     .about .heading{
-        margin-top: 3.8rem;
+        margin-top: 3.5rem;
     }
     .about{
         gap: .5rem;
