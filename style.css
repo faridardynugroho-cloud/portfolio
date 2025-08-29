@@ -457,6 +457,11 @@ span{
 }
 .project-content  img{
     border-radius: .5rem;
+    width: 12vw;
+    height: 12vw;
+}
+.project-content .result p{
+    text-align: justify;
 }
  .github{
     position: absolute;
