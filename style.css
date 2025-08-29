@@ -125,6 +125,10 @@ html{
     align-items: center;
     gap: 1.1rem;
 }
+.btn-bawah{
+    display: flex;
+    gap: 1rem;
+}
 .btn-cv{
     display: flex;
     justify-content: center;
@@ -541,7 +545,7 @@ footer{
         width: 100%;
     }
     .logo{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     .navbar .links{
         display: none;
@@ -565,11 +569,10 @@ footer{
     }
     .home{
         flex-direction: column;
-        padding-top: 5.5rem;
+        padding-top: 5rem;
         gap: 1rem;
         height: 100%;
         width: 100%;
-        padding-bottom: 3rem;
     }
     .home-info h1{
         font-size: 1.5rem;
@@ -588,7 +591,7 @@ footer{
     }
     .btn-home{
         justify-content: center;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
     .btn-cv{
         font-size: 0.7rem ;
@@ -610,12 +613,11 @@ footer{
         order: 2;
     }
     .home-img{
-        margin-top: -.3rem;
         order:1;
     }
     .home-img .img-box{
-        width: 50vw;
-        height: 50vw;
+        width: 60vw;
+        height: 60vw;
     }
     .about .heading{
         margin-top: 4.1rem;
@@ -631,6 +633,7 @@ footer{
     .about p{
         padding: 0 1.5rem;
         font-size: .9rem;
+        text-align: justify;
     }
     .skills{
         padding-top: 5rem;
@@ -814,6 +817,80 @@ footer{
         margin-right: 5rem;
         width: 2.3rem;
         height: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar .links{
+        top: 3.9rem;
+    }
+    .navbar .links li a{
+        font-size: 1rem;
+    }
+    .logo{
+        font-size: 1.3rem;
+    }
+    .home-img .img-box{
+        width: 60vw;
+        height: 60vw;
+    }
+    .about .heading{
+        margin-top: 3.8rem;
+    }
+    .about{
+        gap: .5rem;
+    }
+    .img-about{
+        width: 40vw;
+        height: 40vw;
+    }
+    .skills{
+        padding-top: 4rem;
+    }
+    .skills .skill-row {
+        margin-top: 1rem;
+    }
+    .skill-content .progres h3 img{
+        width: 1.9rem;
+    }
+    .skill-content .progres h3{
+        font-size: 1.1rem;
+    }
+    .progres .bar{
+        height: 1.8rem;
+    }
+    .project{
+        padding-top: 3.5rem;
+    }
+    .project .project-row{
+        margin-top: .5rem;
+    }
+    .project-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .project-content img{
+        height: 40vw;
+        width: 40vw;
+        margin-left: 4rem;
+    }
+    .project-content .result h3{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .project-content .result p{
+        text-align: justify;
+        font-size: .8rem;
+    }
+    .copyright{
+        font-size: .8rem;
+        padding-left: 2rem;
+    }
+    .btn-back{
+        margin-right: 3rem;
+        margin-left: 5rem;
+        width: 1.9rem;
+        height: 2.1rem;
     }
 }
 
