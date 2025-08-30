@@ -1128,7 +1128,7 @@ footer{
     }
 }
 
-@media (max-width: 398px){
+/* @media (max-width: 398px){
     .home-info p{
         font-size: .8rem;
     }
@@ -1142,4 +1142,4 @@ footer{
         height: 2.7rem;
         width: 8rem;
     }
-}
+} */
