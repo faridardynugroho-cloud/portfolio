@@ -477,6 +477,9 @@ html{
 .project-column{
     flex: 1 1 40rem;
 }
+.project-box{
+    position: relative;
+}
 .project-content{
     position: relative;
     border: .2rem solid #008ECC;
@@ -611,10 +614,23 @@ footer{
     background: #081B29;
     z-index: 98;
  }
- .logo .animasi,
+  .animasi2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #112E42;
+    z-index: 98;
+ }
+ .logo .animasi,.menu-nav .animasi,
  .links .animasi,.home.show-animasi .animasi,
- .about.show-animasi .animasi,  .skills.show-animasi .animasi, 
- .project.show-animasi .animasi{
+  .skills.show-animasi .animasi
+{
+    animation: showRight 1s ease forwards;
+    animation-delay: calc(.3s * var(--i));
+ }
+ .project.show-animasi .animasi2, .about.show-animasi .animasi2 {
     animation: showRight 1s ease forwards;
     animation-delay: calc(.3s * var(--i));
  }
@@ -746,6 +762,7 @@ footer{
         margin-top: 20px;
     }
     .project-column{
+        
         flex: 1 1 2rem;
     }
     .project-content .result h3{
@@ -789,9 +806,6 @@ footer{
         width: 100%;
         transition: .25s ease;
 
-    }
-    .menu-nav {
-        padding-right: 1rem;
     }
     .navbar .links li{
         text-align: center;
@@ -869,14 +883,12 @@ footer{
         font-size:1rem ;
         border: 3px solid #008ECC;
         height: 3rem;
-        width: 9rem;
     }
     .btn-contact{
         font-size: 1rem;
-        padding: .5rem 1.4rem;
+        padding: .5rem 1.5rem;
         border: 3px solid #008ECC;
         height: 3rem;
-         width: 9rem;
     }
     .sosmed{
         width: 1.8rem;
@@ -980,15 +992,12 @@ footer{
     .logo{
         font-size: 1.3rem;
     }
-    .home{
-        padding-bottom: 1rem;
-    }
     .home-info .text-animasi {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 16rem;
-        margin-left: 5.5rem;
+        margin-right: 4rem;
         height: 1.5rem;
     }
     .home-info .text-animasi h2{
@@ -1011,7 +1020,9 @@ footer{
         background-position: 0 0;
     }
 }
-
+    .btn-home{
+        flex-direction: column;
+    }
     .home-info p{
         margin-top: 1rem;
     }
@@ -1026,15 +1037,30 @@ footer{
         height: 4rem;
     }
     .btn-cv{
+        padding: 0;
+        width: 9rem;
         height: 3rem;
         border: 3px solid #008ECC;
     }
     .btn-contact{
+        padding: 0;
         height: 3rem;
+        width: 9rem;
+    }
+    .sosmed{
+        margin-top: 2rem;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    .icons{
+        width: 1.2rem;
     }
     .home-img .img-box{
         width: 60vw;
         height: 60vw;
+    }
+    .about{
+        padding-top: 1rem;
     }
     .about .heading{
         margin-top: 3.5rem;
@@ -1102,3 +1128,18 @@ footer{
     }
 }
 
+@media (max-width: 398px){
+    .home-info p{
+        font-size: .8rem;
+    }
+    .btn-cv{
+        font-size:.8rem;
+        height: 2.7rem;
+        width: 8rem;
+    }
+    .btn-contact{
+        font-size:.8rem;
+        height: 2.7rem;
+        width: 8rem;
+    }
+}
