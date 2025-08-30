@@ -50,7 +50,7 @@ html{
     margin-right: 2rem;
 }
 .navbar .links li a{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: white;
     transition: .5s;
     font-weight: 500;
@@ -71,39 +71,56 @@ html{
 }
 .home-info h1{
     position: relative;
-    font-size: 2.6rem;
+    font-size: 2.9rem;
     color: white;
 }
-
-.home-info h2 {
+.home-info .text-animasi{
     position: relative;
-    font-size: 3rem;
-    color: #008ECC;
+    width: 21rem;
+}
+
+.home-info .text-animasi h2 {
+    font-size: 2rem;
+    color: transparent;
     -webkit-text-stroke: .5px #008ECC;
     background-image: linear-gradient(#008ECC, #008ECC);
     background-position: 0 0;
-    animation: display-text 6s linear infinite;
-    animation-delay: calc(-3s * var(--i));
-
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    animation: display-text 5s linear infinite;
+    animation-delay: 2s;
 }
-.home-info h2::before{
+.home-info .text-animasi h2::before{
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    border-right: 2px solid #008ECC;
+    border-right: 3px solid #008ECC;
     z-index: -1;
-
+    animation: displayCursorText 5s linear infinite;
+    animation-delay: 2s;
 }
 
 @keyframes display-text{
     0%,
     10%,
     100%{
-        opacity: 0;
-    };
+        background-position: -21rem 0;
+    }
+    65%,
+    85%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes displayCursorText{
+    0%,
+    10%,
+    100%{
+        width: 0;
+    }
     65%,
     78%,
     85%{
@@ -117,39 +134,19 @@ html{
 
 
 }
-.home-info h2 span::before{
-    content: attr(data-text);
-    position: absolute;
-    width: 0;
-    border-right: .2rem solid #008ECC;
-    color: #008ECC;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: fill-text 4s linear infinite;
 
-}
-@keyframes fill-text{
-    10%,
-    100%{
-        width: 0;
-    }
-    70%,
-    90%{
-        width: 100%;
-    }
-}
 .home-info p{
     position: relative;
     color: white;
-    font-size: 0.9rem;
-    margin: 1rem 0 1.2rem;
+    font-size: 1.2rem;
+    margin: .5rem 0 1.2rem;
     width: 100%;
-    margin-top: -3px;
 }
 .btn-home{
     display: flex;
     align-items: center;
     gap: 1.1rem;
+    margin-top: 1.5rem;
 }
 .btn-atas{
     position: relative;
@@ -165,16 +162,18 @@ html{
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: transparent;
     padding: .5rem .6rem;
     color: #008ECC;
     border-radius: 5rem;
-    border: 3px solid #008ECC;
+    border: 4px solid #008ECC;
     box-shadow: none;
     font-size: 1rem;
     font-weight: 600;
     transition: 0.5s;
-    width: 9rem;
+    width: 9.5rem;
+    height: 3rem;
 }
 .btn-cv:hover{
     background-color: #008ECC;
@@ -185,15 +184,21 @@ html{
 .btn-contact{
     position: relative;
     display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     background-color: transparent;
     padding: .5rem 2rem;
     color: #008ECC;
     border-radius: 5rem;
-    border: 3px solid #008ECC;
+    border: 4px solid #008ECC;
     box-shadow: none;
     font-size: 1rem;
     font-weight: 600;
     transition: 0.5s;
+    width: 9.5rem;
+    height: 3rem;
 }
 .btn-contact:hover{
     background-color: #008ECC;
@@ -515,6 +520,7 @@ span{
 }
 .project-content .result p{
     text-align: justify;
+    font-size: 1rem;
 }
  .github{
     position: absolute;
@@ -619,166 +625,6 @@ footer{
     }
  }
 
-@media (max-width: 576px) {
-    .navbar{
-        padding:1rem 5%;
-        width: 100%;
-    }
-    .logo{
-        font-size: 1.5rem;
-    }
-    .navbar .links{
-        display: none;
-        flex-direction: column;
-        gap: 15px;
-        position: absolute;
-        top: 4.6rem;
-        left: 0;
-        background: #081B29;
-        border-radius: .6rem;
-        width: 100%;
-        transition: .25s ease;
-
-    }
-    .navbar .links li{
-        text-align: center;
-    }
-    .navbar .links.active{
-        display: flex;
-    }
-     .links .animasi{
-        animation: showRight 1s ease forwards;
-        animation-delay: 0s;
-     }
-    .menu-nav{
-        display: flex;
-    }
-    .home{
-        flex-direction: column;
-        padding-top: 5rem;
-        gap: 1rem;
-        height: 100%;
-        width: 100%;
-    }
-    .home-info h1{
-        font-size: 1.5rem;
-        text-align: center;
-    }
-    .home-info h2{
-        font-size: 1.1rem;
-        display: flex;
-        justify-content: center;
-        padding-top: 10px;
-    }
-    .home-info p{
-        font-size: .7rem;
-        margin-top: -.10px;
-        text-align: center;
-    }
-    .btn-home{
-        justify-content: center;
-        margin-bottom: 3rem;
-    }
-    .btn-cv{
-        font-size: 0.7rem ;
-        border: .1rem solid #008ECC;
-    }
-    .btn-contact{
-        font-size: 0.7rem;
-        padding: .5rem 1.4rem;
-        border: 2px solid #008ECC;
-    }
-    .sosmed{
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-    .icons{
-        width: .8rem;
-    }
-    .home-info{
-        order: 2;
-    }
-    .home-img{
-        order:1;
-    }
-    .home-img .img-box{
-        width: 60vw;
-        height: 60vw;
-    }
-    .about .heading{
-        margin-top: 4.1rem;
-        font-size: 2rem;
-    }
-    .img-about{
-        width: 10rem;
-        height: 10rem;
-    }
-    .about h3{
-        font-size: 1.2rem;
-    }
-    .about p{
-        padding: 0 1.5rem;
-        font-size: .9rem;
-        text-align: justify;
-    }
-    .skills{
-        padding-top: 5rem;
-    }
-    .skills .heading{
-        font-size: 2rem;
-    }
-    .skills .skill-row{
-        margin-top: 3rem;
-        gap: 1rem;
-        flex-direction: column;
-    }
-    .skill-row .skill-column{
-        flex: 1 1 5rem;
-    }
-    .skill-content .progres h3 img{
-        width: 2rem;
-    }
-    .skill-content .progres h3{
-        font-size: 1.2rem;
-    }
-    .progres .bar{
-        height: 2rem;
-    }
-    .project{
-        padding-top: 4.2rem;
-    }
-    .project .heading{
-        font-size: 2rem;
-    }
-    .project .project-row{
-        gap: 0;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .project-column{
-        flex: 1 1 2rem;
-    }
-    .project-content .result h3{
-        font-size: 1.3rem;
-    }
-    .project-content img{
-        width: 10rem;
-        height: 10rem;
-    }
-    .project-content .result p{
-        font-size: .8rem;
-    }
-    .copyright{
-        font-size: .8rem;
-        padding-left: 5rem;
-    }
-    .btn-back{
-        margin-right: 5rem;
-        width: 2rem;
-        height: 2.3rem;
-    }
-}
-
 @media (max-width: 768px) {
     .navbar{
         padding:1rem 5%;
@@ -788,44 +634,61 @@ footer{
         font-size: 1.9rem;
     }
     .home{
-        padding-top: 5.5rem;
+        padding-top: 6.5rem;
         gap: 1rem;
         height: 100%;
         width: 100%;
+        padding-bottom: 3rem;
     }
     .home-info h1{
-        font-size: 1.8rem;
-    }
-    .home-info h2{
-        font-size: 1.3rem;
-        padding-top: 10px;
+        font-size: 2.1rem;
     }
     .home-info p{
-        font-size: .8rem;
-        margin-top: -.10px;
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+    .home-info .text-animasi{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20rem;
+        height: 2.3rem;
+    }
+    .home-info .text-animasi h2{
+        font-size: 1.9rem;
+
     }
     .btn-home{
         margin-bottom: 2rem;
     }
+    .btn-atas{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .btn-bawah{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
     .btn-cv{
-        font-size: .8rem ;
-        border: .1rem solid #008ECC;
-        width: 7rem;
+        font-size: 1rem ;
+        border: 2px solid #008ECC;
     }
     .btn-contact{
-        font-size: 0.8rem;
+        font-size: 1rem;
         padding: .5rem 1.4rem;
         border: 2px solid #008ECC;
-        width: 7rem;
+        width: 9rem;
         justify-content: center;
         display: flex;
     }
     .sosmed{
-        width: 1.7rem;
-        height: 1.7rem;
+        width: 1.8rem;
+        height: 1.8rem;
     }
     .icons{
-        width: .9rem;
+        width: 1rem;
     }
     .home-img{
         margin-top: -.3rem;
@@ -906,6 +769,207 @@ footer{
     }
 }
 
+@media (max-width: 576px) {
+    .navbar{
+        padding:1rem 5%;
+        width: 100%;
+    }
+    .logo{
+        font-size: 1.8rem;
+    }
+    .navbar .links{
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 4.6rem;
+        left: 0;
+        background: #081B29;
+        border-radius: .6rem;
+        width: 100%;
+        transition: .25s ease;
+
+    }
+    .menu-nav {
+        padding-right: 1rem;
+    }
+    .navbar .links li{
+        text-align: center;
+    }
+    .navbar .links.active{
+        display: flex;
+    }
+     .links .animasi{
+        animation: showRight 1s ease forwards;
+        animation-delay: 0s;
+     }
+    .menu-nav{
+        display: flex;
+    }
+    .home{
+        flex-direction: column;
+        padding-top: 5rem;
+        gap: 1rem;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .home-info .text-animasi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 19rem;
+        margin-left: 4.2rem;
+        height: 1.5rem;
+    }
+    .home-info .text-animasi h2{
+        font-size: 1.8rem;
+        animation: display-text 5s linear infinite;
+        animation-delay: 2s;
+
+    }
+    .home-info .text-animasi h2::before{
+        padding-top: 0.5rem;
+    }
+    @keyframes display-text{
+    0%,
+    10%,
+    100%{
+        background-position: -19rem 0;
+    }
+    65%,
+    85%{
+        background-position: 0 0;
+    }
+}
+    .home-info h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .home-info p{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+    .btn-home{
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+    .btn-atas{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .btn-bawah{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .btn-cv{
+        font-size:1rem ;
+        border: 3px solid #008ECC;
+        height: 3rem;
+        width: 9rem;
+    }
+    .btn-contact{
+        font-size: 1rem;
+        padding: .5rem 1.4rem;
+        border: 3px solid #008ECC;
+        height: 3rem;
+         width: 9rem;
+    }
+    .sosmed{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    .icons{
+        width: 1rem;
+    }
+    .home-info{
+        order: 2;
+    }
+    .home-img{
+        order:1;
+    }
+    .home-img .img-box{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .about .heading{
+        margin-top: -1rem;
+        font-size: 2.3rem;
+    }
+    .img-about{
+        width: 10rem;
+        height: 10rem;
+    }
+    .about h3{
+        font-size: 1.5rem;
+    }
+    .about p{
+        padding: 0 1.5rem;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    .skills{
+        padding-top: 5rem;
+    }
+    .skills .heading{
+        font-size: 2.3rem;
+    }
+    .skills .skill-row{
+        margin-top: 3rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .skill-row .skill-column{
+        flex: 1 1 5rem;
+    }
+    .skill-content .progres h3 img{
+        width: 2rem;
+    }
+    .skill-content .progres h3{
+        font-size: 1.2rem;
+    }
+    .progres .bar{
+        height: 2rem;
+    }
+    .project{
+        padding-top: 4.2rem;
+    }
+    .project .heading{
+        font-size: 2rem;
+    }
+    .project .project-row{
+        gap: 0;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .project-column{
+        flex: 1 1 2rem;
+    }
+    .project-content .result h3{
+        font-size: 1.3rem;
+    }
+    .project-content img{
+        width: 10rem;
+        height: 10rem;
+    }
+    .project-content .result p{
+        font-size: .8rem;
+    }
+    .copyright{
+        font-size: .8rem;
+        padding-left: 5rem;
+    }
+    .btn-back{
+        margin-right: 5rem;
+        width: 2rem;
+        height: 2.3rem;
+    }
+}
+
 @media (max-width: 458px) {
     .navbar .links{
         top: 3.9rem;
@@ -918,6 +982,55 @@ footer{
     }
     .home{
         padding-bottom: 1rem;
+    }
+    .home-info .text-animasi {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16rem;
+        margin-left: 5.5rem;
+        height: 1.5rem;
+    }
+    .home-info .text-animasi h2{
+        font-size: 1.5rem;
+        animation: display-text 5s linear infinite;
+        animation-delay: 2s;
+
+    }
+    .home-info .text-animasi h2::before{
+        padding-top: 0.5rem;
+    }
+    @keyframes display-text{
+    0%,
+    10%,
+    100%{
+        background-position: -16rem 0;
+    }
+    65%,
+    85%{
+        background-position: 0 0;
+    }
+}
+
+    .home-info p{
+        margin-top: 1rem;
+    }
+    .btn-atas{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .btn-bawah{
+        justify-content: center;
+        align-items: center;
+        height: 4rem;
+    }
+    .btn-cv{
+        height: 3rem;
+        border: 3px solid #008ECC;
+    }
+    .btn-contact{
+        height: 3rem;
     }
     .home-img .img-box{
         width: 60vw;
